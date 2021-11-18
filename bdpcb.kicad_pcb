@@ -1437,7 +1437,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A239)
-    (at 164.683749 138.5298)
+    (at 292.1 126.21261)
     (path /78A2B2A4)
     (fp_text reference L83 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1472,7 +1472,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A56C)
-    (at 179.363749 164.4598)
+    (at 273.05 126.21261)
     (path /78562176)
     (fp_text reference L82 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1612,7 +1612,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A668)
-    (at 109.977499 143.02058)
+    (at 196.85 126.21261)
     (path /78562136)
     (fp_text reference L78 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1682,7 +1682,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A5EA)
-    (at 122.247499 148.75058)
+    (at 137.31875 126.21261)
     (path /78562106)
     (fp_text reference L76 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1787,7 +1787,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A374)
-    (at 171.583749 155.7198)
+    (at 51.59375 126.21261)
     (path /785620C4)
     (fp_text reference L73 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1822,7 +1822,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A94D)
-    (at 178.483749 152.9998)
+    (at 27.77875 126.21261)
     (path /785620B6)
     (fp_text reference L72 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1927,7 +1927,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A431)
-    (at 171.583749 144.2598)
+    (at 254 107.16165)
     (path /78562212)
     (fp_text reference L69 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -1997,7 +1997,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A278)
-    (at 136.047499 163.22058)
+    (at 215.9 107.16165)
     (path /78562234)
     (fp_text reference L67 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2032,7 +2032,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A4AF)
-    (at 109.977499 137.29058)
+    (at 196.85 107.16165)
     (path /78562242)
     (fp_text reference L66 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2312,7 +2312,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A8DE)
-    (at 115.347499 160.21058)
+    (at 34.9225 107.16165)
     (path /78562047)
     (fp_text reference L58 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2347,7 +2347,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A764)
-    (at 108.447499 154.48058)
+    (at 280.19125 88.11069)
     (path /78562000)
     (fp_text reference L57 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2417,7 +2417,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197AA6A)
-    (at 157.783749 155.7198)
+    (at 230.185 88.11069)
     (path /78561FD0)
     (fp_text reference L55 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2487,7 +2487,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A629)
-    (at 157.783749 149.9898)
+    (at 192.0875 88.11069)
     (path /78561FB0)
     (fp_text reference L53 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2522,7 +2522,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197A3B3)
-    (at 164.683749 155.7198)
+    (at 173.035 88.11069)
     (path /78561FA0)
     (fp_text reference L52 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2662,7 +2662,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 61976ED6)
-    (at 108.447499 148.75058)
+    (at 96.8375 88.11069)
     (path /78561F60)
     (fp_text reference L48 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2767,7 +2767,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 61976F54)
-    (at 129.147499 157.49058)
+    (at 32.54125 88.11069)
     (path /78561F30)
     (fp_text reference L45 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2872,7 +2872,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 619774FD)
-    (at 186.263749 164.4598)
+    (at 244.475 69.05973)
     (path /74F6AD71)
     (fp_text reference L42 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2907,7 +2907,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 619777B2)
-    (at 171.583749 149.9898)
+    (at 225.425 69.05973)
     (path /74F6AD61)
     (fp_text reference L41 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -2942,7 +2942,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 619774BE)
-    (at 116.877499 143.02058)
+    (at 206.375 69.05973)
     (path /74F6AD4F)
     (fp_text reference L40 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3012,7 +3012,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197753C)
-    (at 108.447499 160.21058)
+    (at 168.2725 69.05973)
     (path /74F6AD31)
     (fp_text reference L38 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3362,7 +3362,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 619778AE)
-    (at 164.683749 149.9898)
+    (at 254 50.00877)
     (path /748B97BC)
     (fp_text reference L28 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3432,7 +3432,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 61977305)
-    (at 115.347499 148.75058)
+    (at 215.8975 50.00877)
     (path /748B979C)
     (fp_text reference L26 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3607,7 +3607,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 61977050)
-    (at 157.783749 144.2598)
+    (at 120.65 50.00877)
     (path /748B974C)
     (fp_text reference L21 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3747,7 +3747,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197708F)
-    (at 115.347499 154.48058)
+    (at 44.45 50.00877)
     (path /748B970A)
     (fp_text reference L17 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3852,7 +3852,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 619776F5)
-    (at 122.247499 160.21058)
+    (at 273.0475 30.95781)
     (path /72998311)
     (fp_text reference L14 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
@@ -3957,7 +3957,7 @@
   )
 
   (module QB_RGB_LED_footprint:RGB-REVERSE_MOUNT (layer B.Cu) (tedit 6195CEDD) (tstamp 6197747F)
-    (at 103.077499 140.01058)
+    (at 215.8975 30.95781)
     (path /729982DB)
     (fp_text reference L11 (at -2.7235 3.2548) (layer B.SilkS)
       (effects (font (size 0.48 0.48) (thickness 0.15)) (justify mirror))
