@@ -6993,4 +6993,6 @@ Wire Wire Line
 	5375 10975 5375 11450
 Text Notes 9400 6425 0    50   ~ 0
 (reverse-mount SMD common-anode RGB)
+Text Notes 1500 11625 0    50   ~ 0
+nts: use tantalum\ncapacitor here\nto avoid noise
 $EndSCHEMATC
