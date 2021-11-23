@@ -4012,7 +4012,7 @@ L Device:R R1
 U 1 1 69CB0D37
 P 3575 2225
 F 0 "R1" V 3650 2225 50  0000 C CNN
-F 1 "2.2k" V 3575 2225 50  0000 C CNN
+F 1 "4.7k" V 3575 2225 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 3505 2225 50  0001 C CNN
 F 3 "~" H 3575 2225 50  0001 C CNN
 	1    3575 2225
@@ -4023,7 +4023,7 @@ L Device:R R2
 U 1 1 69CB0D41
 P 3750 2225
 F 0 "R2" V 3825 2225 50  0000 C CNN
-F 1 "2.2k" V 3750 2225 50  0000 C CNN
+F 1 "4.7k" V 3750 2225 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric" V 3680 2225 50  0001 C CNN
 F 3 "~" H 3750 2225 50  0001 C CNN
 	1    3750 2225
@@ -4045,17 +4045,6 @@ Wire Wire Line
 	3575 2750 3200 2750
 Wire Wire Line
 	3925 2375 3925 2450
-$Comp
-L Device:R R3
-U 1 1 69CB0D2D
-P 3925 2225
-F 0 "R3" V 4000 2225 50  0000 C CNN
-F 1 "100k" V 3925 2225 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" V 3855 2225 50  0001 C CNN
-F 3 "~" H 3925 2225 50  0001 C CNN
-	1    3925 2225
-	-1   0    0    1   
-$EndComp
 Text GLabel 3925 2450 2    50   Input ~ 0
 INTB
 $Comp
@@ -6995,4 +6984,15 @@ Text Notes 9400 6425 0    50   ~ 0
 (reverse-mount SMD common-anode RGB)
 Text Notes 1500 11625 0    50   ~ 0
 nts: use tantalum\ncapacitor here\nto avoid noise
+$Comp
+L Device:R R3
+U 1 1 69CB0D2D
+P 3925 2225
+F 0 "R3" V 4000 2225 50  0000 C CNN
+F 1 "4.7k" V 3925 2225 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3855 2225 50  0001 C CNN
+F 3 "~" H 3925 2225 50  0001 C CNN
+	1    3925 2225
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
