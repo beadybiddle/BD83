@@ -3952,7 +3952,6 @@ Text Notes 1950 2475 2    50   ~ 0
 SPI pins\nused by\nBluefruit
 NoConn ~ 2000 2550
 NoConn ~ 3200 1650
-NoConn ~ 3200 1850
 NoConn ~ 3200 1950
 NoConn ~ 3200 2050
 NoConn ~ 3200 2150
@@ -6995,4 +6994,17 @@ F 3 "~" H 3925 2225 50  0001 C CNN
 	1    3925 2225
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:VBUS #PWR?
+U 1 1 6204CA71
+P 3250 1850
+F 0 "#PWR?" H 3250 1700 50  0001 C CNN
+F 1 "VBUS" V 3250 1950 50  0000 L CNN
+F 2 "" H 3250 1850 50  0001 C CNN
+F 3 "" H 3250 1850 50  0001 C CNN
+	1    3250 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 1850 3250 1850
 $EndSCHEMATC
