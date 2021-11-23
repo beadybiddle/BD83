@@ -2795,33 +2795,8 @@ F 3 "" H 5075 1675 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2300 6750
-Connection ~ 2300 11425
 Wire Wire Line
-	2300 11075 2300 11125
-$Comp
-L Jumper:SolderJumper_2_Bridged JP7
-U 1 1 6A8C6D5B
-P 2300 11275
-F 0 "JP7" H 2225 11200 50  0000 L CNN
-F 1 "12_bridge" H 2100 11400 50  0001 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 2300 11275 50  0001 C CNN
-F 3 "~" H 2300 11275 50  0001 C CNN
-	1    2300 11275
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR024
-U 1 1 6A8C6D51
-P 2300 11075
-F 0 "#PWR024" H 2300 10925 50  0001 C CNN
-F 1 "+3V3" H 2275 11225 50  0000 C CNN
-F 2 "" H 2300 11075 50  0001 C CNN
-F 3 "" H 2300 11075 50  0001 C CNN
-	1    2300 11075
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2300 6400 2300 6450
+	2500 6550 2500 6600
 $Comp
 L Jumper:SolderJumper_3_Bridged12 JP5
 U 1 1 66EA3134
@@ -2843,17 +2818,6 @@ F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 1700 9500 50 
 F 3 "~" H 1700 9500 50  0001 C CNN
 	1    1700 9500
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Jumper:SolderJumper_2_Bridged JP4
-U 1 1 61D4CD45
-P 2300 6600
-F 0 "JP4" H 2225 6525 50  0000 L CNN
-F 1 "12_bridge" H 2100 6725 50  0001 L CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 2300 6600 50  0001 C CNN
-F 3 "~" H 2300 6600 50  0001 C CNN
-	1    2300 6600
-	0    1    1    0   
 $EndComp
 $Comp
 L Jumper:SolderJumper_3_Bridged12 JP8
@@ -2960,85 +2924,77 @@ F 3 "" H 1700 9700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1925 7400 1925 7725
-Wire Wire Line
-	1825 7600 1825 7650
-Connection ~ 1825 7400
-Wire Wire Line
-	1825 7400 1925 7400
+	1700 7550 1700 7600
+Connection ~ 1700 7350
 $Comp
 L Device:C_Small C9
 U 1 1 C144381B
-P 1825 7500
-F 0 "C9" V 2000 7400 50  0000 L CNN
-F 1 "0.47uF" V 1925 7350 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1825 7500 50  0001 C CNN
-F 3 "~" H 1825 7500 50  0001 C CNN
-	1    1825 7500
+P 1700 7450
+F 0 "C9" V 1875 7350 50  0000 L CNN
+F 1 "0.47uF" V 1800 7300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1700 7450 50  0001 C CNN
+F 3 "~" H 1700 7450 50  0001 C CNN
+	1    1700 7450
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR017
 U 1 1 C1443811
-P 1825 7650
-F 0 "#PWR017" H 1825 7400 50  0001 C CNN
-F 1 "GND" H 1900 7500 50  0000 R CNN
-F 2 "" H 1825 7650 50  0001 C CNN
-F 3 "" H 1825 7650 50  0001 C CNN
-	1    1825 7650
+P 1700 7600
+F 0 "#PWR017" H 1700 7350 50  0001 C CNN
+F 1 "GND" H 1775 7450 50  0000 R CNN
+F 2 "" H 1700 7600 50  0001 C CNN
+F 3 "" H 1700 7600 50  0001 C CNN
+	1    1700 7600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR016
 U 1 1 C1443807
-P 1825 7400
-F 0 "#PWR016" H 1825 7250 50  0001 C CNN
-F 1 "+3V3" H 1800 7550 50  0000 C CNN
-F 2 "" H 1825 7400 50  0001 C CNN
-F 3 "" H 1825 7400 50  0001 C CNN
-	1    1825 7400
+P 1700 7350
+F 0 "#PWR016" H 1700 7200 50  0001 C CNN
+F 1 "+3V3" H 1675 7500 50  0000 C CNN
+F 2 "" H 1700 7350 50  0001 C CNN
+F 3 "" H 1700 7350 50  0001 C CNN
+	1    1700 7350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1575 12400 1575 12450
+	1675 12300 1675 12350
+Connection ~ 1675 12100
 Wire Wire Line
-	1725 12400 1925 12400
-Wire Wire Line
-	1725 12200 1725 12400
-Connection ~ 1575 12200
-Wire Wire Line
-	1575 12200 1725 12200
+	1675 12100 1825 12100
 $Comp
 L Device:C_Small C17
 U 1 1 C05D36B1
-P 1575 12300
-F 0 "C17" V 1750 12250 50  0000 L CNN
-F 1 "0.47uF" V 1675 12150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1575 12300 50  0001 C CNN
-F 3 "~" H 1575 12300 50  0001 C CNN
-	1    1575 12300
+P 1675 12200
+F 0 "C17" V 1850 12150 50  0000 L CNN
+F 1 "0.47uF" V 1775 12050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1675 12200 50  0001 C CNN
+F 3 "~" H 1675 12200 50  0001 C CNN
+	1    1675 12200
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR030
 U 1 1 C05D3054
-P 1575 12450
-F 0 "#PWR030" H 1575 12200 50  0001 C CNN
-F 1 "GND" H 1650 12300 50  0000 R CNN
-F 2 "" H 1575 12450 50  0001 C CNN
-F 3 "" H 1575 12450 50  0001 C CNN
-	1    1575 12450
+P 1675 12350
+F 0 "#PWR030" H 1675 12100 50  0001 C CNN
+F 1 "GND" H 1625 12325 50  0000 R CNN
+F 2 "" H 1675 12350 50  0001 C CNN
+F 3 "" H 1675 12350 50  0001 C CNN
+	1    1675 12350
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR029
 U 1 1 C05D2CA0
-P 1575 12200
-F 0 "#PWR029" H 1575 12050 50  0001 C CNN
-F 1 "+3V3" H 1550 12350 50  0000 C CNN
-F 2 "" H 1575 12200 50  0001 C CNN
-F 3 "" H 1575 12200 50  0001 C CNN
-	1    1575 12200
+P 1675 12100
+F 0 "#PWR029" H 1675 11950 50  0001 C CNN
+F 1 "+3V3" H 1650 12250 50  0000 C CNN
+F 2 "" H 1675 12100 50  0001 C CNN
+F 3 "" H 1675 12100 50  0001 C CNN
+	1    1675 12100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3111,9 +3067,9 @@ Text GLabel 1925 13000 0    50   Input ~ 0
 IICRST
 Text GLabel 1925 12900 0    50   Input ~ 0
 SDB
-Text GLabel 1925 12700 0    50   Input ~ 0
+Text GLabel 1525 12700 0    50   Input ~ 0
 SCL
-Text GLabel 1925 12600 0    50   Input ~ 0
+Text GLabel 1525 12600 0    50   Input ~ 0
 SDA
 $Comp
 L power:GND #PWR031
@@ -3509,12 +3465,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR011
 U 1 1 901E2871
-P 2300 6400
-F 0 "#PWR011" H 2300 6250 50  0001 C CNN
-F 1 "+3V3" H 2275 6550 50  0000 C CNN
-F 2 "" H 2300 6400 50  0001 C CNN
-F 3 "" H 2300 6400 50  0001 C CNN
-	1    2300 6400
+P 2500 6550
+F 0 "#PWR011" H 2500 6400 50  0001 C CNN
+F 1 "+3V3" H 2475 6700 50  0000 C CNN
+F 2 "" H 2500 6550 50  0001 C CNN
+F 3 "" H 2500 6550 50  0001 C CNN
+	1    2500 6550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -3660,9 +3616,9 @@ Text GLabel 1175 8225 0    50   Input ~ 0
 SDB
 Text GLabel 1925 8125 0    50   Input ~ 0
 INTB
-Text GLabel 1925 8025 0    50   Input ~ 0
+Text GLabel 1375 8025 0    50   Input ~ 0
 SCL
-Text GLabel 1925 7925 0    50   Input ~ 0
+Text GLabel 1375 7925 0    50   Input ~ 0
 SDA
 Wire Wire Line
 	1500 8725 1500 8675
@@ -3678,19 +3634,13 @@ F 3 "" H 1500 8725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1925 8225 1300 8225
-Wire Wire Line
 	1300 8225 1300 8375
-Wire Wire Line
-	1925 8325 1500 8325
 Wire Wire Line
 	1500 8325 1500 8375
 Wire Wire Line
 	1500 8325 1175 8325
-Connection ~ 1500 8325
 Wire Wire Line
 	1175 8225 1300 8225
-Connection ~ 1300 8225
 Wire Wire Line
 	3325 1750 3325 1625
 Wire Wire Line
@@ -6995,10 +6945,10 @@ F 3 "~" H 3925 2225 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:VBUS #PWR?
+L power:VBUS #PWR0101
 U 1 1 6204CA71
 P 3250 1850
-F 0 "#PWR?" H 3250 1700 50  0001 C CNN
+F 0 "#PWR0101" H 3250 1700 50  0001 C CNN
 F 1 "VBUS" V 3250 1950 50  0000 L CNN
 F 2 "" H 3250 1850 50  0001 C CNN
 F 3 "" H 3250 1850 50  0001 C CNN
@@ -7007,4 +6957,164 @@ F 3 "" H 3250 1850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3200 1850 3250 1850
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP4
+U 1 1 622C0899
+P 2300 6600
+F 0 "JP4" V 2200 6425 50  0000 L CNN
+F 1 "13_bridge" H 2100 6675 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 2300 6600 50  0001 C CNN
+F 3 "~" H 2300 6600 50  0001 C CNN
+	1    2300 6600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR024
+U 1 1 627ECA3C
+P 2100 6550
+F 0 "#PWR024" H 2100 6400 50  0001 C CNN
+F 1 "VBUS" V 2100 6650 50  0000 L CNN
+F 2 "" H 2100 6550 50  0001 C CNN
+F 3 "" H 2100 6550 50  0001 C CNN
+	1    2100 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 6550 2100 6600
+Wire Wire Line
+	2100 11225 2100 11275
+$Comp
+L power:VBUS #PWR035
+U 1 1 629AC433
+P 2100 11225
+F 0 "#PWR035" H 2100 11075 50  0001 C CNN
+F 1 "VBUS" V 2100 11325 50  0000 L CNN
+F 2 "" H 2100 11225 50  0001 C CNN
+F 3 "" H 2100 11225 50  0001 C CNN
+	1    2100 11225
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP7
+U 1 1 629AC429
+P 2300 11275
+F 0 "JP7" V 2200 11100 50  0000 L CNN
+F 1 "13_bridge" H 2100 11350 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 2300 11275 50  0001 C CNN
+F 3 "~" H 2300 11275 50  0001 C CNN
+	1    2300 11275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR036
+U 1 1 629AC41F
+P 2500 11225
+F 0 "#PWR036" H 2500 11075 50  0001 C CNN
+F 1 "+3V3" H 2475 11375 50  0000 C CNN
+F 2 "" H 2500 11225 50  0001 C CNN
+F 3 "" H 2500 11225 50  0001 C CNN
+	1    2500 11225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 11225 2500 11275
+Connection ~ 2300 11425
+Text Notes 875  6550 0    50   ~ 0
+VIO on 3V3 to talk with mcu\nAVCC/DVCC/PVCC on VBUS\n(5V plugged, VBAT unplugged)
+$Comp
+L Jumper:SolderJumper_2_Bridged JP14
+U 1 1 635326D8
+P 1725 12600
+F 0 "JP14" H 1725 12675 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 1725 12714 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1725 12600 50  0001 C CNN
+F 3 "~" H 1725 12600 50  0001 C CNN
+	1    1725 12600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP15
+U 1 1 63542687
+P 1725 12700
+F 0 "JP15" H 1725 12625 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 1725 12814 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1725 12700 50  0001 C CNN
+F 3 "~" H 1725 12700 50  0001 C CNN
+	1    1725 12700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 12600 1575 12600
+Wire Wire Line
+	1875 12600 1925 12600
+Wire Wire Line
+	1925 12700 1875 12700
+Wire Wire Line
+	1575 12700 1525 12700
+$Comp
+L Jumper:SolderJumper_2_Bridged JP12
+U 1 1 63DC0559
+P 1575 8025
+F 0 "JP12" H 1575 7950 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 1575 8139 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1575 8025 50  0001 C CNN
+F 3 "~" H 1575 8025 50  0001 C CNN
+	1    1575 8025
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP11
+U 1 1 63DC054F
+P 1575 7925
+F 0 "JP11" H 1575 8000 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 1575 8039 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1575 7925 50  0001 C CNN
+F 3 "~" H 1575 7925 50  0001 C CNN
+	1    1575 7925
+	1    0    0    -1  
+$EndComp
+Connection ~ 1500 8325
+Wire Wire Line
+	1925 8325 1500 8325
+Connection ~ 1300 8225
+Wire Wire Line
+	1925 8225 1300 8225
+Wire Wire Line
+	1725 7925 1925 7925
+Wire Wire Line
+	1925 8025 1725 8025
+Wire Wire Line
+	1425 7925 1375 7925
+Wire Wire Line
+	1375 8025 1425 8025
+$Comp
+L Jumper:SolderJumper_2_Bridged JP10
+U 1 1 6540A8AB
+P 1850 7575
+F 0 "JP10" H 1850 7650 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 1850 7689 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1850 7575 50  0001 C CNN
+F 3 "~" H 1850 7575 50  0001 C CNN
+	1    1850 7575
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 7350 1850 7425
+Wire Wire Line
+	1700 7350 1850 7350
+Wire Wire Line
+	1850 7725 1925 7725
+$Comp
+L Jumper:SolderJumper_2_Bridged JP13
+U 1 1 663B69D2
+P 1825 12250
+F 0 "JP13" H 1825 12325 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 1825 12364 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 1825 12250 50  0001 C CNN
+F 3 "~" H 1825 12250 50  0001 C CNN
+	1    1825 12250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1825 12400 1925 12400
 $EndSCHEMATC
