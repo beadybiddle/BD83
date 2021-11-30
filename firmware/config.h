@@ -28,10 +28,28 @@
  */
 #define MATRIX_ROW_PINS { F0, F1, F4, F5, F6, F7 }
 #define MATRIX_COL_PINS { A0, A1, A2, A3, A4, A5, A6, A7, B6, B5, B4, B3, B2, B1, B0 }
-#define UNUSED_PINS { B1, B2, B3, B6, B7, C7, D2, D3, D6 } // TODO figure out if BLE pins are "unused"
+#define UNUSED_PINS_MCU { B1, B2, B3, B6, B7, C7, D2, D3, D6 } // TODO figure out if BLE pins are "unused"
+#define UNUSED_PINS_MCP { B7 }
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
+
+/* TODO */
+#define DRIVER_COUNT 2
+#define DRIVER_1_LED_TOTAL 44
+#define DRIVER_2_LED_TOTAL 39
+#define DRIVER_LED_TOTAL 83
+// 00 <-> GND
+// 01 <-> SCL
+// 10 <-> SDA
+// 11 <-> VCC
+// ADDR1 represents A1:A0 of the 7-bit address.
+// ADDR2 represents A3:A2 of the 7-bit address.
+// The result is: 0b101(ADDR2)(ADDR1)
+#define DRIVER_ADDR_1 0b1010000 // master
+#define DRIVER_ADDR_2 0b1010011 // slave 1
+#define DRIVER_SYNC_1 01 // sync clock master
+#define DRIVER_SYNC_2 10 // sync clock slave
 
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.

@@ -21,6 +21,8 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = no           # Audio output
 
 # other stuff
+RBG_MATRIX_ENABLE = yes
+RGB_MATRIX_DRIVER = IS31FL3733
 BLUETOOTH_ENABLE = yes
 CUSTOM_MATRIX = lite
 # io expansion stuff

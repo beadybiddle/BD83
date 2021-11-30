@@ -17,10 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /*
- * This code was heavily inspired by the ergodox_ez keymap, and modernized
- * to take advantage of the quantum.h microcontroller agnostics gpio control
- * abstractions and use the macros defined in config.h for the wiring as opposed
- * to repeating that information all over the place.
+ * This code is adapted from the Ferris 0.1
  */
 
 #include QMK_KEYBOARD_H
@@ -44,7 +41,7 @@ extern i2c_status_t mcp23017_status;
 #define I2C_ADDR_READ ((I2C_ADDR << 1) | I2C_READ)
 
 // Register addresses
-// See https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library/blob/master/Adafruit_MCP23017.h
+// See https://github.com/adafruit/Adafruit-MCP23017-Arduino-Library/blob/master/src/Adafruit_MCP23X17.h
 #define IODIRA 0x00  // i/o direction register
 #define IODIRB 0x01
 #define GPPUA 0x0C  // GPIO pull-up resistor register
@@ -54,7 +51,7 @@ extern i2c_status_t mcp23017_status;
 #define OLATA 0x14  // output latch register
 #define OLATB 0x15
 
-bool         i2c_initialized = 0;
+bool i2c_initialized = 0;
 i2c_status_t mcp23017_status = I2C_ADDR;
 
 uint8_t init_mcp23017(void) {
@@ -72,18 +69,15 @@ uint8_t init_mcp23017(void) {
     // - unused  : input  : 1
     // - input   : input  : 1
     // - driving : output : 0
-    // This means: we will read all the bits on GPIOA
-    // This means: we will write to the pins 0-4 on GPIOB (in select_rows)
-    uint8_t buf[]   = {IODIRA, 0b11111111, 0b11110000};
+    // This means: we will read all the bits on GPIOA and GPIOB
+    uint8_t buf[]   = {IODIRA, 0b11111111, 0b11111111};
     mcp23017_status = i2c_transmit(I2C_ADDR_WRITE, buf, sizeof(buf), I2C_TIMEOUT);
     if (!mcp23017_status) {
         // set pull-up
         // - unused  : on  : 1
         // - input   : on  : 1
         // - driving : off : 0
-        // This means: we will read all the bits on GPIOA
-        // This means: we will write to the pins 0-4 on GPIOB (in select_rows)
-        uint8_t pullup_buf[] = {GPPUA, 0b11111111, 0b11110000};
+        uint8_t pullup_buf[] = {GPPUA, 0b11111111, 0b11111111};
         mcp23017_status      = i2c_transmit(I2C_ADDR_WRITE, pullup_buf, sizeof(pullup_buf), I2C_TIMEOUT);
     }
     return mcp23017_status;
