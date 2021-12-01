@@ -11,5 +11,5 @@ const is31_led __flash g_is31_leds[DRIVER_1_LED_TOTAL] = {
  *   |  |       |       B location
  *   |  |       |       | */
     {0, B_1,    A_1,    C_1},
-    {1, TODO }
+    {1, B_1,    A_1,    C_1}
 }

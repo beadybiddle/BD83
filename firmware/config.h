@@ -29,7 +29,7 @@
 #define MATRIX_ROW_PINS { F0, F1, F4, F5, F6, F7 }
 #define MATRIX_COL_PINS { A0, A1, A2, A3, A4, A5, A6, A7, B6, B5, B4, B3, B2, B1, B0 }
 #define UNUSED_PINS_MCU { B1, B2, B3, B6, B7, C7, D2, D3, D6 } // TODO figure out if BLE pins are "unused"
-#define UNUSED_PINS_MCP { B7 }
+#define UNUSED_PINS_MCP { B7 } // all but one of the 16 mcp23017 gpio are used for cols
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
