@@ -2,9 +2,10 @@
 
 ![bd83](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+83 Key Keeb.
+Adafruit Feather 32u4 BLE dev board, MCP23017 I2C expander to make enough GPIO, IS31FL3733Bs for driving per-key RGB.
 
-* Keyboard Maintainer: [David Desrochers](https://github.com/beadybiddle)
+* Keyboard Maintainer: [beadybiddle](https://github.com/beadybiddle)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 
