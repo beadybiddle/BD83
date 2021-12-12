@@ -59,7 +59,7 @@ uint8_t init_mcp23017(void) {
 static matrix_row_t matrix[MATRIX_ROWS]; // debounced values
 
 static matrix_row_t read_cols(uint8_t row);
-static void         init_cols(void);
+// static void         init_cols(void);
 static void         unselect_rows(void);
 static void         select_row(uint8_t row);
 
@@ -128,10 +128,10 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
     return changed;
 }
 
-static void init_cols(void) {
-    // init on mcp23017 not needed, already done as part of init_mcp23017()
-    // init on mcu not needed because no cols on are MCU GPIO
-}
+// static void init_cols(void) {
+//     // init on mcp23017 not needed, already done as part of init_mcp23017()
+//     // init on mcu not needed because no cols on are MCU GPIO
+// }
 
 // return value is ordered {GPx14, ..., GPx0} with 0s for depressed switches
 // colN corresponds to GPxN
@@ -152,12 +152,12 @@ static matrix_row_t read_cols(uint8_t row) {
         }
 
         // read cols on GPIOB (8-14)
-        uint8_t buf[] = {GPIOB};
-        mcp23017_status = i2c_transmit(I2C_ADDR_WRITE, buf, sizeof(buf), I2C_TIMEOUT);
-        uint8_t data[] = {0};
+        uint8_t buf2[] = {GPIOB};
+        mcp23017_status = i2c_transmit(I2C_ADDR_WRITE, buf2, sizeof(buf2), I2C_TIMEOUT);
+        uint8_t data2[] = {0};
         if (!mcp23017_status) {
-            mcp23017_status = i2c_receive(I2C_ADDR_READ, data, sizeof(data), I2C_TIMEOUT);
-            current_row_value |= ~(data[0] << 8);
+            mcp23017_status = i2c_receive(I2C_ADDR_READ, data2, sizeof(data2), I2C_TIMEOUT);
+            current_row_value |= ~(data2[0] << 8);
         }
 
         return current_row_value;
