@@ -59,7 +59,7 @@ uint8_t init_mcp23017(void) {
 static matrix_row_t matrix[MATRIX_ROWS]; // debounced values
 
 static matrix_row_t read_cols(uint8_t row);
-// static void         init_cols(void);
+static void         init_cols(void);
 static void         unselect_rows(void);
 static void         select_row(uint8_t row);
 
@@ -69,8 +69,7 @@ void matrix_init_custom(void) {
     mcp23017_status = init_mcp23017();
 
     unselect_rows();
-    // TODO prune
-    // init_cols();
+    init_cols();
 
     // initialize matrix state: all keys off
     for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
@@ -78,18 +77,17 @@ void matrix_init_custom(void) {
     }
 }
 
-// TODO prune if possible
-// void matrix_power_up(void) {
-//     mcp23017_status = init_mcp23017();
+void matrix_power_up(void) {
+    mcp23017_status = init_mcp23017();
 
-//     unselect_rows();
-//     init_cols();
+    unselect_rows();
+    init_cols();
 
-//     // initialize matrix state: all keys off
-//     for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-//         matrix[i] = 0;
-//     }
-// }
+    // initialize matrix state: all keys off
+    for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
+        matrix[i] = 0;
+    }
+}
 
 // reads and stores a row, returning whether a change occurred.
 static inline bool store_matrix_row(matrix_row_t current_matrix[], uint8_t index) {
@@ -128,10 +126,10 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
     return changed;
 }
 
-// static void init_cols(void) {
-//     // init on mcp23017 not needed, already done as part of init_mcp23017()
-//     // init on mcu not needed because no cols on are MCU GPIO
-// }
+static void init_cols(void) {
+    // init on mcp23017 not needed, already done as part of init_mcp23017()
+    // init on mcu not needed because no cols on are MCU GPIO
+}
 
 // return value is ordered {GPx14, ..., GPx0} with 0s for depressed switches
 // colN corresponds to GPxN
