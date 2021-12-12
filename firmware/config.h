@@ -61,12 +61,12 @@
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
 
-/* triple tap to sticky layer via TT */
-#define TAPPING_TOGGLE 2
+// /* triple tap to sticky layer via TT */
+// #define TAPPING_TOGGLE 2
 
-/* disable these deprecated features by default */
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
+// /* disable these deprecated features by default */
+// #define NO_ACTION_MACRO
+// #define NO_ACTION_FUNCTION
 
 /* Bootmagic Lite key configuration */
 //#define BOOTMAGIC_LITE_ROW 0

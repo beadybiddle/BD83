@@ -10,7 +10,7 @@
 #include "i2c_master.h"
 
 extern i2c_status_t mcp23017_status;
-#define I2C_TIMEOUT 100
+#define I2C_TIMEOUT 1000
 
 /* 
  * I2C address:
@@ -136,7 +136,7 @@ static void init_cols(void) {
 // array needs to be reversed because reasons TODO
 // TODO write directly to current_row_value instead of using data middle man
 static matrix_row_t read_cols(uint8_t row) {
-    matrix_row_t current_row_value = 0;
+    // matrix_row_t current_row_value = 0;
     if (mcp23017_status) {  // if there was an error
         return 0;
     } else {
@@ -146,19 +146,21 @@ static matrix_row_t read_cols(uint8_t row) {
         uint8_t data[] = {0};
         if (!mcp23017_status) {
             mcp23017_status = i2c_receive(I2C_ADDR_READ, data, sizeof(data), I2C_TIMEOUT);
-            current_row_value |= ~(data[0]); // bitwise not is needed since switches are read low (0) if closed
+            // current_row_value |= ~(data[0]); // bitwise not is needed since switches are read low (0) if closed
+            data[0] = ~(data[0]);
         }
+        return data[0];
 
-        // read cols on GPIOB (8-14)
-        uint8_t buf2[] = {GPIOB};
-        mcp23017_status = i2c_transmit(I2C_ADDR_WRITE, buf2, sizeof(buf2), I2C_TIMEOUT);
-        uint8_t data2[] = {0};
-        if (!mcp23017_status) {
-            mcp23017_status = i2c_receive(I2C_ADDR_READ, data2, sizeof(data2), I2C_TIMEOUT);
-            current_row_value |= ~(data2[0] << 8);
-        }
+        // // read cols on GPIOB (8-14)
+        // uint8_t buf2[] = {GPIOB};
+        // mcp23017_status = i2c_transmit(I2C_ADDR_WRITE, buf2, sizeof(buf2), I2C_TIMEOUT);
+        // uint8_t data2[] = {0};
+        // if (!mcp23017_status) {
+        //     mcp23017_status = i2c_receive(I2C_ADDR_READ, data2, sizeof(data2), I2C_TIMEOUT);
+        //     current_row_value |= ~(data2[0] << 8);
+        // }
 
-        return current_row_value;
+        // return current_row_value;
     }
 }
 
