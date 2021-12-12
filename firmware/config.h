@@ -18,8 +18,8 @@
 
 /*
  * Keyboard Matrix Assignments
- * COLS: AVR pins used for columns, left to right
- * ROWS: AVR pins used for rows, top to bottom
+ * rows are on MCU
+ * cols are on expander (MCP)
  */
 #define MATRIX_ROW_PINS { F0, F1, F4, F5, F6, F7 }
 #define MATRIX_COL_PINS { A0, A1, A2, A3, A4, A5, A6, A7, B6, B5, B4, B3, B2, B1, B0 }
@@ -37,7 +37,7 @@
 #define DRIVER_COUNT 2
 #define DRIVER_1_LED_TOTAL 44
 #define DRIVER_2_LED_TOTAL 39
-#define DRIVER_LED_TOTAL 83
+#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 // 00 <-> GND
 // 01 <-> SCL
 // 10 <-> SDA
@@ -71,15 +71,27 @@
 
 #define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
-#define RGB_DISABLE_TIMEOUT 600000
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
+#define RGB_MATRIX_LED_PROCESS_LIMIT (DRIVER_LED_TOTAL + 4) / 5
+#define RGB_MATRIX_LED_FLUSH_LIMIT 16 // 60 Hz equivalent
+#define RGB_DISABLE_TIMEOUT 600000 // 10 minute timeout
+#define RGB_DISABLE_WHEN_USB_SUSPENDED // disable RGB when wireless
+#define RGBLIGHT_SLEEP // sleep when host sleeps
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // to limit power consumption
+
+/* RGB startup defaults */
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE
-#define RGB_MATRIX_STARTUP_HUE 90
+#define RGB_MATRIX_STARTUP_HUE 90 // goldish
 #define RGB_MATRIX_STARTUP_SAT 225
 #define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #define RGB_MATRIX_STARTUP_SPD 127
 
+// #define RGBLIGHT_HUE_STEP 10
+// #define RGBLIGHT_SAT_STEP 17
+// #define RGBLIGHT_VAL_STEP 17
+
+// TODO RGB COLOR LAYERS
+
+/* disable ugly modes */
 #define DISABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
 #define DISABLE_RGB_MATRIX_BAND_PINWHEEL_VAL
 #define DISABLE_RGB_MATRIX_BAND_SPIRAL_SAT
