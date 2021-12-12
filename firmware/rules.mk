@@ -2,7 +2,7 @@
 MCU = atmega32u4
 
 # Bootloader selection
-BOOTLOADER = atmel-dfu
+BOOTLOADER = caterina
 
 # Build Options
 #   change yes to no to disable
@@ -23,7 +23,8 @@ AUDIO_ENABLE = no           # Audio output
 # other stuff
 RBG_MATRIX_ENABLE = yes
 RGB_MATRIX_DRIVER = IS31FL3733
-BLUETOOTH = AdafruitBLE
+BLUETOOTH_ENABLE = yes
+BLUETOOTH_DRIVER = AdafruitBLE
 CUSTOM_MATRIX = lite
 # io expansion stuff
 SRC += matrix.c
