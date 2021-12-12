@@ -18,21 +18,20 @@
 
 /*
  * Keyboard Matrix Assignments
- *
- * Change this to how you wired your keyboard
  * COLS: AVR pins used for columns, left to right
  * ROWS: AVR pins used for rows, top to bottom
- * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
- *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
- *
  */
 #define MATRIX_ROW_PINS { F0, F1, F4, F5, F6, F7 }
 #define MATRIX_COL_PINS { A0, A1, A2, A3, A4, A5, A6, A7, B6, B5, B4, B3, B2, B1, B0 }
 #define UNUSED_PINS_MCU { B1, B2, B3, B6, B7, C7, D2, D3, D6 } // TODO figure out if BLE pins are "unused"
 #define UNUSED_PINS_MCP { B7 } // all but one of the 16 mcp23017 gpio are used for cols
 
-/* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
+
+/* Bluetooth */
+// #define AdafruitBLEResetPin TODO
+// #define AdafruitBleCSPin TODO
+// #define AdafruitBLEIRQPin TODO
 
 /* RGB driving */
 #define DRIVER_COUNT 2
@@ -58,6 +57,9 @@
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
 #define DEBOUNCE 5
+
+/* triple tap to sticky layer via TT */
+#define TAPPING_TOGGLE 2
 
 /* disable these deprecated features by default */
 #define NO_ACTION_MACRO
