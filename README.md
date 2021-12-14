@@ -47,7 +47,7 @@ A SPDT switch controls the 3V3 regulator enable pin so that power can be control
 The PCB was definitely the most fun part of this whole project; learning to make something so different from what I'm used to was nice.
 I routed all of the traces twice because after getting an understanding and making some messy paths the first time it was much easier to organize the rats nest from scratch.
 I also went through several iterations of component placements in the process in order to make room for the traces and switches. Most keyboards have plenty of free real estate behind their big spacebars or above the arrow keys, but my compact layout meant everything had to be crammed in tight gaps.
-![PCB](images/pcb_withsilk.png) ![PCB](images/pcb_nosilk.png) ![PCB Front](images/pcb_front_only.png) ![PCB Back](images/pcb_back_only.png)
+![PCB](images/pcb_with_silk.png) ![PCB](images/pcb_no_silk.png)
 ![PCB Render](images/pcb_3d_view.png)
 
 This was also the first time I'd done reflow soldering, but that was easy enough with the stencil and oven. And only one diode was backwards!
