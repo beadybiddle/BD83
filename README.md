@@ -23,14 +23,13 @@ TODO insert plate dxf and photo here
 #### Case
 I've designed two cases, one which is full-sized and intended to be printed on a Form 3L SLA printer at the GaTech Invention Studio, and another which is minimal (hardly qualifying as a case) that I printed on my Voxelab Aquila. All outward-facing edges are chamfered or filleted to look nice and not hurt the flesh. On the back is a hole for a USB-C adapter dongle to poke through. The underside features a pretty beadybiddle logo and some rubber feet made from EPDM rubber bands. I also designed a wrist rest to be extra, but I've made the case so slim that it's not necessary.
 I was unable to get access to the Form 3L before the studio closed for the year.
-TODO insert renders
+![Case](images/case_render.png) ![Case Corner](images/case_corner_render.png) ![Case Underside](images/case_bottom_notrender.png)
 The two halves of the case are fastened by eight M3x10 machine screws and nuts around the perimeter. The plate has flanges around the edges that allow it to be sandwiched between these two halves, cushioned by strips of EPDM to dampen the sound and make the typefeel just a little springy. The interior of the case has only 0.8mm of wiggle room to the dangling PCB, making it literally as compact as possible. It is angled five degrees so that the front height is minimized while making room for the Feather board and batteries in the back.
-TODO insert sections
-![desc](link)
+![Fastener Assembly](images/case_screwsection.png) ![Plate Sandwich](images/case_section.png)
 
 The minimal "case" is actually four feet that clip onto the plate and are secured by a single large band. It has the same five degree inclination as the full case so that the electronics won't touch the desk surface. The open design leaves the switches and PCB accessible.
 TODO insert renders and photos
-![desc](link)
+![Feet](images/feet_render.png)
 
 #### PCB
 The PCB took the longest of all the components (maybe because I'd never made one before) but I'll try to keep it brief here:
@@ -43,13 +42,16 @@ Diodes are placed between each switch and its corresponding row to prevent ghost
 VCC is fed through decoupling caps as needed to the slave chips; decoupling around the MCU is already handled by the Feather board.
 The address pins on the three I2C chips have solder bridges for customizing the addresses if more devices are added.
 A SPDT switch controls the 3V3 regulator enable pin so that power can be controlled, especially when going wireless.
+![Schematic](images/schematic.png)
 
 The PCB was definitely the most fun part of this whole project; learning to make something so different from what I'm used to was nice.
 I routed all of the traces twice because after getting an understanding and making some messy paths the first time it was much easier to organize the rats nest from scratch.
 I also went through several iterations of component placements in the process in order to make room for the traces and switches. Most keyboards have plenty of free real estate behind their big spacebars or above the arrow keys, but my compact layout meant everything had to be crammed in tight gaps.
-This was also the first time I'd done reflow soldering, but that was easy enough with the stencil and oven. And only one diode was backwards!
+![PCB](images/pcb_withsilk.png) ![PCB](images/pcb_nosilk.png) ![PCB Front](images/pcb_front_only.png) ![PCB Back](images/pcb_back_only.png)
+![PCB Render](images/pcb_3d_view.png)
 
-TODO insert prints and render and photo(s)
+This was also the first time I'd done reflow soldering, but that was easy enough with the stencil and oven. And only one diode was backwards!
+![PCB Photo](images/soldered_pcb.jpg)
 Designed in KiCad and fabricated by JLCPCB.
 
 ### Firmware
