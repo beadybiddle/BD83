@@ -19,6 +19,7 @@ There are three main custom hardware components to this keyboard:
 #### Plate
 Keyboards don't necessarily need a plate, but for a myriad of reasons it made sense for me to use one. The plate is 0.06" 304 stainless steel, making it unyielding which is better for linear switch typefeel. I generated a template in swillKB then modeled the plate in Fusion360. Using the DXF exported from Fusion, I waterjet cut the plate.
 TODO insert plate dxf and photo here
+![Plate](images/plate.png)
 
 #### Case
 I've designed two cases, one which is full-sized and intended to be printed on a Form 3L SLA printer at the GaTech Invention Studio, and another which is minimal (hardly qualifying as a case) that I printed on my Voxelab Aquila. All outward-facing edges are chamfered or filleted to look nice and not hurt the flesh. On the back is a hole for a USB-C adapter dongle to poke through. The underside features a pretty beadybiddle logo and some rubber feet made from EPDM rubber bands. I also designed a wrist rest to be extra, but I've made the case so slim that it's not necessary.
@@ -28,8 +29,8 @@ The two halves of the case are fastened by eight M3x10 machine screws and nuts a
 ![Fastener Assembly](images/case_screwsection.png) ![Plate Sandwich](images/case_section.png)
 
 The minimal "case" is actually four feet that clip onto the plate and are secured by a single large band. It has the same five degree inclination as the full case so that the electronics won't touch the desk surface. The open design leaves the switches and PCB accessible.
-TODO insert renders and photos
 ![Feet](images/feet_render.png)
+TODO insert photo
 
 #### PCB
 The PCB took the longest of all the components (maybe because I'd never made one before) but I'll try to keep it brief here:
