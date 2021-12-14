@@ -19,7 +19,7 @@
 #define MATRIX_COL_PINS_MCP { A0, A1, A2, A3, A4, A5, A6, A7, B6, B5, B4, B3, B2, B1, B0}
 #define MATRIX_ROW_PINS { F0, F1, F4, F5, F6, F7}
 #define MATRIX_COL_PINS { A1, A1, A1, A1, A1, A1, A1, A1, A1, A1, A1, A1, A1, A1, A1} // just placeholder pins
-#define MATRIX_IO_DELAY 30
+// #define MATRIX_IO_DELAY 30
 #define DIODE_DIRECTION COL2ROW
 
 /* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
@@ -39,7 +39,9 @@
 #ifdef RGB_MATRIX_ENABLE
 	/* RGB driving */
 	#define DRIVER_COUNT 2
+	// #define DRIVER_COUNT 1
 	#define DRIVER_1_LED_TOTAL 44
+	// #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
 	#define DRIVER_2_LED_TOTAL 39
 	#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 	// 00 <-> GND
