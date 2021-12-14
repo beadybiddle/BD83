@@ -1,37 +1,62 @@
 # BD83
-A fully custom 83 Key mechanical keyboard designed around the way that beadybiddle types. I intend to be able to say that this is truly a keyboard customized to my needs.
+A fully custom 83 Key mechanical keyboard designed around the way that I type. I intend to be able to say that this is truly a keyboard customized to my liking.
+The original motivation behind this project was just a frustration at standard ANSI layouts. This project features custom everything, including PCB, plate, case, firmware, and eventually keycaps. Before creating anything, I initially just filmed my hands typing and gaming for an hour to figure out my own tendencies and key usage.
 
-### Layout
-Every moved, removed, or added key is for the sake of streamlining typing, data entry, and gaming.
-##### Space Bar
-Normal space bars are dumb. I bet you only use one thumb to press space when typing, and you definitely only use your left thumb when gaming. Why waste 6.25u on a single function when you can have a couple of 2u's for it and make room in the middle for an extra key? After a lot of testing and asking others about their spacebar use it seems that each thumb stays within a pretty tight (~2u) region of the spacebar.
-##### Backspace and Delete
-Normal backspace is also dumb. It's one of the most used keys when typing, yet it's so far from the home row that you have to move your entire right hand to reach it. No sense whatsoever. So I've added a secondary backspace (which I intend to use primarily) between my split spacebar. This way I can backspace with either thumb and without losing a beat.
-I've left the original backspace where it was for the sake of anyone who ever has to use my weird layout but isn't accustomed to the new keys.
-##### Caps Lock
-I've literally never used caps lock in my life. Begone with it.
-##### Numpad
-Lefthand numpads make more sense, but take more space. I needed to fit the same functionality into a ~70% form factor, so the fn modifier has taken the place of caps lock. This way I can switch layers with the left hand (while still using the mouse in the right when gaming or entering data). Putting the numpad behind WASD allows me to hold fn and enter numbers with just that hand. FN+1 also acts as KC_CALC to open the calculator. I tend to use the calculator often alongside CAD or whatever else. I have a bad habit of opening when I need it and closing when I'm done, so it's a pain to always open it when that entails so much work (actually just win+"calc"+enter but still more of a pain than I'd like).
-##### Nav Cluster
-The only time I ever use Home/End/PgUp/PgDn is when writing code, in which case they go to line start, line end, top of page, and bottom of page respectively. So, they are now positioned in a way that makes sense. Home is above the left arrow (since it goes all the way left), and likewise End above the right arrow. Paging up and down is left to the second layer because I never use them but wanted to keep them on the keyboard in case they're ever required or I want to map them to something.
-##### F13
-No idea what I'll use this for. Just had room for it by shrinking the backspace and figured it'd be fun to have.
+### Layout changes:
+- Space bar is shrunk and split because nobody needs six keys' worth of real estate to hit one button.
+- Backspace is shrunk because I don't intend to use it there. I've added a secondary backspace between the space bars.
+- Caps lock is useless. I've removed it.
+- Right shift is useless. I've removed it.
+- Numpad function is incorporated into the FN layer on the lefthand side.
+- Nav cluster has been moved around the arrow keys so it's easier and more intuitive to navigate code with home/end.
+- F13 is now a thing because I had room for it.
 
 ### Hardware
-TODO.
-#### PCB
-Designed in KiCad
-Fabricated by JLCPCB
-TODO
+There are three main custom hardware components to this keyboard:
+- PCB, self explanatory
+- Plate, the layer that the keyswitches clip into
+- Case, the pieces that house the rest of the board
+#### Plate
+Keyboards don't necessarily need a plate, but for a myriad of reasons it made sense for me to use one. The plate is 0.06" 304 stainless steel, making it unyielding which is better for linear switch typefeel. I generated a template in swillKB then modeled the plate in Fusion360. Using the DXF exported from Fusion, I waterjet cut the plate.
+TODO insert plate dxf and photo here
+
 #### Case
-Modeled in Fusion360
-Going to have it fabricated at the GaTech Invention Studio (TODO)
-TODO
-#### Keycaps
-TODO
+I've designed two cases, one which is full-sized and intended to be printed on a Form 3L SLA printer at the GaTech Invention Studio, and another which is minimal (hardly qualifying as a case) that I printed on my Voxelab Aquila. All outward-facing edges are chamfered or filleted to look nice and not hurt the flesh. On the back is a hole for a USB-C adapter dongle to poke through. The underside features a pretty beadybiddle logo and some rubber feet made from EPDM rubber bands. I also designed a wrist rest to be extra, but I've made the case so slim that it's not necessary.
+I was unable to get access to the Form 3L before the studio closed for the year.
+TODO insert renders
+The two halves of the case are fastened by eight M3x10 machine screws and nuts around the perimeter. The plate has flanges around the edges that allow it to be sandwiched between these two halves, cushioned by strips of EPDM to dampen the sound and make the typefeel just a little springy. The interior of the case has only 0.8mm of wiggle room to the dangling PCB, making it literally as compact as possible. It is angled five degrees so that the front height is minimized while making room for the Feather board and batteries in the back.
+TODO insert sections
+![desc](link)
+
+The minimal "case" is actually four feet that clip onto the plate and are secured by a single large band. It has the same five degree inclination as the full case so that the electronics won't touch the desk surface. The open design leaves the switches and PCB accessible.
+TODO insert renders and photos
+![desc](link)
+
+#### PCB
+The PCB took the longest of all the components (maybe because I'd never made one before) but I'll try to keep it brief here:
+I made it to support three main features: bluetooth, RGB lighting, and some level of expandability.
+The brains of the board is an Adafruit Feather 32u4 Bluefruit LE, which is a devboard with an intregated nRF51822 BLE module. It also handles LiPo power for going completely wireless.
+The LEDs are common-anode RGB packages, and are controlled by two IS31FL3733B drivers. The MCU talks to these drivers via I2C. I was originally planning to use a string of WS2812Bs or SK6812Es, but these have a substantially higher power draw than the ISSI scanning matrix drivers.
+There are only 20 GPIO pins on the Feather, though, and several are already used for SPI with the BLE module. In order to accomodate my ideal 83 keys, it would take at least 19 pins to connect all the switches even with matrix duplexing, a number that I couldn't muster while dedicating three to the LED drivers. To get get some extra GPIO, I use an MCP23017 I2C I/O expander. This communicates on the same I2C lines as the ISSI drivers, and creates an additional 16 GPIO pins - more than enough for the rest of the switch matrix.
+
+Diodes are placed between each switch and its corresponding row to prevent ghosting as the matrix is scanned.
+VCC is fed through decoupling caps as needed to the slave chips; decoupling around the MCU is already handled by the Feather board.
+The address pins on the three I2C chips have solder bridges for customizing the addresses if more devices are added.
+A SPDT switch controls the 3V3 regulator enable pin so that power can be controlled, especially when going wireless.
+
+The PCB was definitely the most fun part of this whole project; learning to make something so different from what I'm used to was nice.
+I routed all of the traces twice because after getting an understanding and making some messy paths the first time it was much easier to organize the rats nest from scratch.
+I also went through several iterations of component placements in the process in order to make room for the traces and switches. Most keyboards have plenty of free real estate behind their big spacebars or above the arrow keys, but my compact layout meant everything had to be crammed in tight gaps.
+This was also the first time I'd done reflow soldering, but that was easy enough with the stencil and oven. And only one diode was backwards!
+
+TODO insert prints and render and photo(s)
+Designed in KiCad and fabricated by JLCPCB.
 
 ### Firmware
-I actually haven't written the firmware yet (Nov 24 2021). TODO.
-#### NKRO
-No NKRO support. I don't know why everyone always goes out of their way to ensure they get NKRO when they all end up typing at a miserable 90 WPM and never hitting more than two keys at once anyways. Unless you are doing stenography, NKRO is a worthless feature.
-Seriously though, the primary reason I can't support NKRO is because the current BLE protocol doesn't allow me to.
+Easily the most difficult (or maybe just frustrating?) part, I wrote custom firmware for the board with the help of the QMK framework. QMK handles a lot of the nitty gritty stuff so that I instead dedicate dozens of hours to custom matrix scanning and debugging the RGB.
+Defining switch order, keymappings, and LED positions was tedious but simple. The real problem was that as far as I can tell, I'm the first person to make a keyboard that drives rows from the MCU and read columns from an IO expander.
+I visited square one a few times, rewriting the firmware each time I ran into a deadend that couldn't be debugged.
+The first time, I thought the board wasn't flashing. Turns out it was flashing, but the firmware I wrote sucked so bad that it kicked back into bootloader.
+The second time, I had it flashed but nothing responded and no debug messages even printed. I never figured out why, because I just rewrote everything after a day of failed debugging.
+Finally I have the (mostly) working firmware, which is fully functional as a keyboard input and also supports typing over bluetooth. Unfortunately the RGB still doesn't work for some unknown reason, but luckily the BLE meets the critera for additional features to the keyboard.
+
