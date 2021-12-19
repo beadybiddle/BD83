@@ -1,27 +1,9 @@
 /*
-Copyright 2013 Oleg Kostyuk <cub.uanic@gmail.com>
-          2020 Pierre Chevalier <pierrechevalier83@gmail.com>
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * Copyright 2013 Oleg Kostyuk <cub.uanic@gmail.com>
+ *           2020 Pierre Chevalier <pierrechevalier83@gmail.com>
+ *           2021 David Desrochers (@beadybiddle)
+ * SPDX-License-Identifier: GPL-2.0-or-later
 */
-
-/*
- * This code was heavily inspired by the ergodox_ez keymap, and modernized
- * to take advantage of the quantum.h microcontroller agnostics gpio control
- * abstractions and use the macros defined in config.h for the wiring as opposed
- * to repeating that information all over the place.
- */
 
 #include QMK_KEYBOARD_H
 #include "i2c_master.h"
@@ -148,7 +130,6 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
 }
 
 static matrix_row_t read_cols(uint8_t row) {
-    // matrix_io_delay();
     if (mcp23017_status) {  // if there was an error
         return 0;
     } else {

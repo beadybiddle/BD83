@@ -41,18 +41,15 @@
 #define DRIVER_1_LED_TOTAL 44
 #define DRIVER_2_LED_TOTAL 39
 #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
-// 00 <-> GND
-// 01 <-> SCL
-// 10 <-> SDA
-// 11 <-> VCC
+// GND = 00, VCC = 11
 // address as 0b101(ADDR2)(ADDR1)
 #define DRIVER_ADDR_1 0b1010000 // master
 #define DRIVER_ADDR_2 0b1010011 // slave 1
 #define DRIVER_SYNC_1 01 // sync clock master
 #define DRIVER_SYNC_2 10 // sync clock slave
 
-#define ISSI_TIMEOUT 100
-#define ISSI_PERSISTENCE 2
+#define ISSI_TIMEOUT 100 // in ms
+#define ISSI_PERSISTENCE 2 // msg retry count
 #define ISSI_PWM_FREQUENCY 0 // default 8.4kHz
 
 #define RGB_MATRIX_LED_PROCESS_LIMIT (DRIVER_LED_TOTAL + 4) / 5
@@ -61,12 +58,12 @@
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 #define RGBLIGHT_SLEEP // sleep when host sleeps
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // to limit power consumption
-#define RGB_MATRIX_KEYPRESSES
-#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_KEYPRESSES // enable keypress rgb modes
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS // enable fancy rgb modes
 
 /* RGB startup defaults */
 #define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE
-#define RGB_MATRIX_STARTUP_HUE 90 // goldish
+#define RGB_MATRIX_STARTUP_HUE 90 // gold-ish
 #define RGB_MATRIX_STARTUP_SAT 225
 #define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #define RGB_MATRIX_STARTUP_SPD 127

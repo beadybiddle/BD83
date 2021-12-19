@@ -34,25 +34,25 @@ void keyboard_post_init_user(void) {
   debug_enable=true;
 }
 
-// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-// #ifdef CONSOLE_ENABLE
-//     uprintf("KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time);
-// #endif 
-//   return true;
-// }
-
-// runs on layer state change
-layer_state_t layer_state_set_user(layer_state_t state) {
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE
-    uprintf("layer %u", state);
+    uprintf("KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time);
 #endif 
-#ifdef RGB_MATRIX_ENABLE
-    case _BASE:
-        // TODO
-        break;
-    case _FN:
-        // TODO
-        break;
-#endif
-    return state;
+  return true;
 }
+
+// // runs on layer state change
+// layer_state_t layer_state_set_user(layer_state_t state) {
+// #ifdef CONSOLE_ENABLE
+//     uprintf("layer %u", state);
+// #endif 
+// #ifdef RGB_MATRIX_ENABLE
+//     case _BASE:
+//         // TODO
+//         break;
+//     case _FN:
+//         // TODO
+//         break;
+// #endif
+//     return state;
+// }

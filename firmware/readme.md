@@ -6,7 +6,7 @@
 Adafruit Feather 32u4 BLE dev board, MCP23017 I2C expander to make enough GPIO, two IS31FL3733Bs for driving per-key RGB.
 
 * Keyboard Maintainer: [beadybiddle](https://github.com/beadybiddle)
-* Hardware Supported: Custom PCB
+* Hardware Supported: Custom PCB (see BD83 repo)
 * Hardware Availability: TODO fetch links to components
 
 Make example for this keyboard (after setting up your build environment):
