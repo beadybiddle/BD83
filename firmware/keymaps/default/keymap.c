@@ -21,11 +21,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_FN] = LAYOUT_beadybiddle(
         RESET,   RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI, RGB_SAD, RGB_SAI, RGB_VAD, RGB_VAI, RGB_SPD, RGB_SPI, KC_MUTE, KC_VOLD, KC_VOLU,  KC_INS,
-        _______, KC_CALC, KC_EQL,  KC_PSLS, KC_PAST, _______, _______, _______, _______, _______, _______, _______, _______, OUT_USB,  OUT_BT,
+        KC_MYCM, KC_CALC, KC_EQL,  KC_PSLS, KC_PAST, _______, _______, _______, _______, _______, _______, _______, _______, OUT_USB,  OUT_BT,
         _______, KC_P7,   KC_P8,   KC_P9,   KC_PMNS, _______, _______, KC_HOME, KC_UP,   KC_END,  _______, _______, _______, OUT_AUTO,
         _______, KC_P4,   KC_P5,   KC_P6,   KC_PPLS, _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,          _______,
         _______, KC_P1,   KC_P2,   KC_P3,   KC_PDOT, _______, _______, _______, _______, _______, _______, KC_PGUP, _______,          KC_PGDN,
-        _______, _______, KC_P0,   KC_PENT,          _______,          _______, _______, _______, KC_SLEP, _______, _______,          _______
+        _______, KC_NUM,  KC_P0,   KC_PENT,          _______,          _______, _______, _______, KC_SLEP, _______, _______,          _______
     )
 };
 
