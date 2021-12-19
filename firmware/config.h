@@ -39,9 +39,7 @@
 #ifdef RGB_MATRIX_ENABLE
 	/* RGB driving */
 	#define DRIVER_COUNT 2
-	// #define DRIVER_COUNT 1
 	#define DRIVER_1_LED_TOTAL 44
-	// #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
 	#define DRIVER_2_LED_TOTAL 39
 	#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 	// 00 <-> GND
@@ -53,6 +51,10 @@
 	#define DRIVER_ADDR_2 0b1010011 // slave 1
 	#define DRIVER_SYNC_1 01 // sync clock master
 	#define DRIVER_SYNC_2 10 // sync clock slave
+
+	#define ISSI_TIMEOUT 100
+	#define ISSI_PERSISTENCE 2
+	#define ISSI_PWM_FREQUENCY 0
 
 	#define RGB_MATRIX_LED_PROCESS_LIMIT (DRIVER_LED_TOTAL + 4) / 5
 	#define RGB_MATRIX_LED_FLUSH_LIMIT 16 // 60 Hz equivalent
